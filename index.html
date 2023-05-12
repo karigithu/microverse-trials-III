@@ -17,21 +17,33 @@
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <form action="" id="survey-form">
-      <label for="name" id="name-label">Name</label>
-      <input type="text" placeholder="Please enter name" id="name" name="name" title="Name" required />
-      <label for="email" id="email-label">Email</label>
-      <input type="text" id="email" placeholder="Please enter email" name="email" title="Email" required />
-      <label for="number" id="number-label">Number</label>
-      <input type="number" id="number" placeholder="Please enter number" name="number" title="Number" min="1" max="100" />
-      <select id="dropdown">
-        <option value="">Please select an Operating System</option>
-        <option value="android">Android</option>
-        <option value="ios">iOS</option>
-        <option value="windows-mobile">Windows Mobile</option>
-        <option value="blackberry-os">Blackberry OS</option>
-        <option value="samsung-bada">Samsung Bada</option>
-      </select>
-      <fieldset id="options">
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" placeholder="Please enter name" id="name" name="name" title="Name" required />
+      </div>
+      <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input type="text" id="email" placeholder="Please enter email" name="email" title="Email" required />
+      </div>
+      <div class="form-group">
+        <label for="number" id="number-label">Number</label>
+        <input type="number" id="number" placeholder="Please enter number" name="number" title="Number" min="1" max="100" />
+      </div>
+      <div class="form-group">
+        <select id="dropdown">
+          <option value="">Please select an Operating System</option>
+          <option value="android">Android</option>
+          <option value="ios">iOS</option>
+          <option value="windows-mobile">Windows Mobile</option>
+          <option value="blackberry-os">Blackberry OS</option>
+          <option value="samsung-bada">Samsung Bada</option>
+        </select>
+      </div>
+      <fieldset id="options" class="form-group">
+        <div>
+          <input type="radio" id="radio" name="options" value="" />
+          <label for="radio">Please select an Option</label>
+        </div>
         <div>
           <input type="radio" id="before-2020" name="options" value="before-2020" />
           <label for="before-2020">Before 2020</label>
@@ -45,17 +57,30 @@
           <label for="after-2020">After 2020</label>
         </div>
       </fieldset>
-      <input type="checkbox" value="option1" id="optionOne" name="optionOne">
-      <label for="optionOne">Option 1</label>
-      <input type="checkbox" value="option2" id="optionTwo" name="optionTwo">
-      <label for="optionTwo">Option 2</label>
-      <input type="checkbox" value="option3" id="optionThree" name="optionThree">
-      <label for="optionThree">Option 3</label>
-      <textarea name="" id="" cols="30" rows="10">
-
-      </textarea>
-      <input type="submit">
-
+      <fieldset id="checkboxes" class="form-group">
+        <div>
+          <input type="checkbox" value="" id="option" name="option">
+          <label for="option">Please select options</label>
+        </div>
+        <div>
+          <input type="checkbox" value="option1" id="optionOne" name="optionOne">
+          <label for="optionOne">Option 1</label>
+        </div>
+        <div>
+          <input type="checkbox" value="option2" id="optionTwo" name="optionTwo">
+          <label for="optionTwo">Option 2</label>
+        </div>
+        <div>
+          <input type="checkbox" value="option3" id="optionThree" name="optionThree">
+          <label for="optionThree">Option 3</label>
+        </div>
+      </fieldset>
+      <div class="form-group">
+        <textarea name="comments" id="comments" cols="30" rows="100" placeholder="Please enter any comments"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" id="submit" class="button" title="Submit" />
+      </div>
     </form>
   </body>
 </html>
